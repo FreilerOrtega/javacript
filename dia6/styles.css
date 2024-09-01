@@ -1,0 +1,11 @@
+.productos{
+    border: solid black 0.1vw;
+    display: flex;
+    justify-content: space-between;
+    height: 4vw;
+}
+
+h1{
+    
+}
+

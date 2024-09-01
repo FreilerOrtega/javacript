@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+
+
+<p>naciste en :</p>
+<p id="año_nacimiento"> </p>
+    
+<script>
+
+    function myfunction(año_actual,edad_actual){
+     return año_actual-edad_actual;
+    }
+   
+    let año_actual=prompt
+    ("Ingresa el año actual:");
+
+    let edad_actual=prompt("Ingresa la edad que cumpliste o cumpliras en el año actual");
+
+    let result = myfunction (año_actual,edad_actual);
+    document.getElementById("año_nacimiento").innerHTML=result
+
+    
+
+   
+
+</script>
+
+<script>
+    let celsius = parseFloat(prompt('grados celsius:'));
+    let convertir = 1.8 * celsius + 32;
+    document.write(convertir + " °F");
+</script>
+
+<script>
+let cliente = 25
+const descuento = function llegada (){
+
+    if(cliente <=20){
+        console.log("el cliente tiene el 30 % de descuento");
+    }
+
+    else if (cliente >20 & cliente <=50){
+        console.log("el cliente tien el 10% de descuento");
+    }
+}
+
+descuento()
+    
+
+</script>
+
+
+
+
+
+</body>
+</html>

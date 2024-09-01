@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //* funcion --> instrucionesque realiza una tarea o calcula un valor*/
+
+
+        /*declaracion de una funcion sin return*/
+
+        function imprimensaje() {
+
+            console.log('hola soy una funcion !');
+
+        }
+
+        imprimensaje();
+
+        /*declaracio de una funcion con return*/
+
+        function calculapromedio(num1, num2, num3) {
+            let promedio = (num1 + num2 + num3) / 3;
+            return 'el promedio es :' + promedio + 'dolares';
+        }
+
+        console.log(calculapromedio(35, 10, 9));
+
+
+        /* asignar la funcion a una variable */
+
+        const calcula = calculapromedio;
+        console.log(calcula(45, 35, 62));
+
+        /* expresion de una funcion 
+    
+        const calculaArea = function (ancho,alto){
+            const area = ancho + alto ;
+    
+        } 
+    
+        console.log(calculaArea(25,10));*/
+
+        /* funciones de tipo flecha */
+
+        const calculaArea = (ancho, alto) => {
+            const area = ancho + alto;
+            return area;
+        }
+
+        console.log(calculaArea(25, 10));
+
+        /* funciones flecha con una solo parametro y sola expresion */
+        const multiplica = x => x ** 3;
+        console.log(multiplica(10));
+
+        /* funcion como parametro */
+
+        const avisausuario = (fun, x) => {
+            alert(fun(x));
+        }
+
+        const saludausuario = (nombre = 'amigo') => {
+            return `hola ${nombre}`;
+
+
+        }
+
+        avisausuario(saludausuario, 'sergio');
+
+
+
+        /*variables var,let,const*/
+
+        /*var es un tipo de variable con el cual se puede acceder a el valor dado desde cualquier parte.
+         incluso si esta dendro de un bloque de codigo como por ejemplo una funcion o un condicional */
+
+
+        if (true) {
+            var nombre = "freiler ortega ";
+
+        }
+
+        console.log(nombre);
+
+        /*let por otra parte no se puede acceder desde cualquier parte si let esta dentro de un bloque de codigo no va a poder acceder desde afuera   */
+
+        
+
+        
+
+        /* const es una constante es un tipo de variable para establecer un numero, letra, cadena que una vez se asigna no pueda cambiar */
+
+
+        const email ="freilerestupinan1999@gmail.com"
+
+        email();
+       
+    
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
