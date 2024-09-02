@@ -1,21 +1,33 @@
-document.getElementById("idpersonaje").addEventListener("change",(e)=>{
-    let valor=document.getElementById("idpersonaje").value;
-    console.log(valor)
+document.getElementById("idpersonaje").addEventListener("change", (e) => {
+  let valor = document.getElementById("idpersonaje").value;
+  console.log(valor)
 
-    var api = "https://swapi.py4e.com/api/people/"
+  var api = "https://swapi.py4e.com/api/people/"
 
-    fetch(api+valor)
-    .then(res=>res.json())
-    .then(persona=>{
+  fetch(api + valor)
+    .then(res => res.json())
+    .then(persona => {
 
-        fetch(persona.homeworld)
-        .then(mundo=>mundo.json())
-        .then(mundos=>{
-            let guardarmundo=document.getElementById("mundos");
-            guardarmundo.innerHTML=`
-           <table>
-                <tbody>
-                    <tr>
+      fetch(persona.species)
+      .then(especies=>especies.json)
+      .then(especie=>{
+
+        let guardarespecie = document.getElementById("especie")
+        guardarespecie.innerHTML=`
+        <table>
+         <tr>
+          
+        `
+      })
+
+      fetch(persona.homeworld)
+        .then(mundo => mundo.json())
+        .then(mundos => {
+          let guardarmundo = document.getElementById("mundos");
+          guardarmundo.innerHTML = `
+          <table >
+          <tbody>
+          <tr >
                     <td>Name:</td>
                     <td>${mundos.name}</td>
                     </tr>
@@ -68,13 +80,14 @@ document.getElementById("idpersonaje").addEventListener("change",(e)=>{
             `
         })
 
-        let pelicula = persona.films
-        pelicula.forEach(cantidad => {
-            fetch(cantidad)
-            .then(cant=>cant.json())
-            .then(guardapelis=>{
-                let peli = document.getElementById("pelicula");
-                peli.innerHTML+=`
+      let pelicula = persona.films
+      pelicula.forEach(cantidad => {
+        fetch(cantidad)
+          .then(cant => cant.json())
+          .then(guardapelis => {
+            let peli = document.getElementById("pelicula");
+            peli.innerHTML += `
+                <table >
                  <tr>
                     <td>Name:</td>
                     <td>${guardapelis.title}</td>
@@ -111,17 +124,17 @@ document.getElementById("idpersonaje").addEventListener("change",(e)=>{
                     <td>Url: </td>
                     <td>${guardapelis.url}</td>
                     </tr>
-                    
+                </table>  
                 `
-            })
-            
-            
-        });
+          })
 
 
-        let tabla= document.getElementById("table");
-        tabla.innerHTML=`
-        <tr>
+      });
+
+
+      let tabla = document.getElementById("table");
+      tabla.innerHTML = `
+          <table> 
             <tr>
                 <td>Name:</td>
                 <td>${persona.name}</td>
@@ -206,8 +219,8 @@ document.getElementById("idpersonaje").addEventListener("change",(e)=>{
                 <td>Url:</td> 
                 <td>${persona.url}</td>    
               </tr>
-        </tr>
+          </table>
         `
-        
+
     })
 })

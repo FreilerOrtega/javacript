@@ -1,0 +1,52 @@
+body{
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.caja{
+    width: 425px;
+    height: 637px;
+}
+
+#img{
+    position:relative;
+}
+
+#muñeco{
+    width: 100px;
+    height: 100px;
+    margin-top: -450px;
+    margin-left: 150px;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+#input1{
+    position: relative;
+    top: -200px;
+    right: -110px;
+}
+
+#boton1{
+    position: relative;
+    margin-left: 30px;
+    top:-120px ;
+    left: -140px;
+    width: 100px;
+    height: 50px;
+    z-index: 1;
+}
+
+#boton2{
+    position: relative;
+    margin-left:130px;
+    top:-170px ;
+    left:100px;
+    width: 100px;
+    height: 50px;
+    z-index: 1;
+}
