@@ -1,4 +1,4 @@
-document.getElementById("idpersonaje").addEventListener("change", (e) => {
+document.getElementById("idpersonaje").addEventListener("input", (e) => {
   let valor = document.getElementById("idpersonaje").value;
   console.log(valor)
 
