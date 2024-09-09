@@ -20,14 +20,14 @@ body{
     background-color: #442222;
     font-size: 30px; 
     position: absolute;
-    top: 30%; 
+    top: 10%; 
     left: 30%; 
     transform-style: preserve-3d; 
     transform: translate(-50%, -50%); 
     border-radius: 12px; 
     text-align: center;
     cursor: pointer;
-    animation: carrusel 11s linear infinite;
+    animation: carrusel 12s linear infinite;
 }
 
 @keyframes carrusel{
@@ -68,7 +68,7 @@ body{
 }
 
 
-#titulo{
+#tabla{
     align-items: center;
     justify-content: center;
     position: relative;
