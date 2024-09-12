@@ -4,35 +4,78 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-   
+    background-image: url(./img/pixelcut-export.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
 
-#cartas{
+#jugador1{
     margin: 0 auto;
-    width: 8vw;
-    height: 13vw;
-    background-color: black;
+    width: 7vw;
+    height: 10vw;
+    top: 5vw;
     position: absolute;
     border-radius: 1vw;
     
 }
 
+#jugador2{
+    margin: 0 auto;
+    top: 33vw;
+    width: 8vw;
+    height: 10vw;
+    position: absolute;
+    border-radius: 1vw;
+    
+}
+
+
 #img{
     justify-content: center;
     align-items: center;
     display: flex;
+    
 }
 
 #imgcard{
-    width: 8vw;
-    height: 13vw;
+    width: 7vw;
+    height: 10vw;
 }
 
 #fondo{
+    margin-top: 0.2vw;
+    width: 27vw;
+    border-radius: 20px;
+}
 
-    width: 30vw;
-    border-radius: 5px;
+#mayor{
+    font-size: 1vw;
+    color: rgb(201, 192, 164);
+    background: linear-gradient(rgb(224, 156, 156),rgb(46, 59, 46));
+    position: absolute;
+    width: 5vw;
+    height: 2vw;
+    top: 20vw;
+    left: 42vw;
+    box-shadow:  -2px 3px 1px rgb(65, 64, 64);;
+    
+}
+
+
+
+
+#menor{
+    font-size: 1vw;
+    color: rgb(201, 192, 164); 
+    background: linear-gradient(rgb(224, 156, 156),rgb(46, 59, 46));
+    position: absolute;
+    width: 5vw;
+    height: 2vw;
+    top: 20vw;
+    left: 42vw;
+    margin-left: 10vw;
+    box-shadow:  -2px 3px 1px rgb(65, 64, 64);;
+    
 }
